@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "collection": "Approved positive finished illustrations",
+  "provenance": "Seven user-generated finished positive illustrations explicitly authorized by their owner for public skill examples and visually cross-checked against the original thread summary. Original private photos and negative example images are excluded.",
+  "verification_scope": "Visual style and positive-reference classification were checked. Original private photos were not available for comparison; identity, clothing, object and scene fidelity to source photos has not been verified.",
+  "usage_scope": "Use these works as visual style references. Depicted people, objects, text, locations and decorations are example-specific content and must not be copied into unrelated requests.",
+  "metadata_review": "Each source PNG contains only IHDR, IDAT and IEND chunks, with no trailing data. No embedded text, EXIF or other ancillary metadata was present.",
+  "copy_method": "Byte-for-byte copies; no image transformations.",
+  "examples": [
+    {
+      "file": "01-kindergarten.png",
+      "media_type": "image/png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 4022602,
+      "sha256": "78639c8b1210d5767743e0028e3c0c11b03d9f758ba6dc3438caa300e82beccb",
+      "description": "Daytime sign and two foreground figures",
+      "classification": "authorized_positive_finished_illustration"
+    },
+    {
+      "file": "02-station-night.png",
+      "media_type": "image/png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 4044504,
+      "sha256": "04503e157e69b601403603bbd71670c2d168785e1edb4cbc6597fdba76838b68",
+      "description": "Night station and two foreground figures",
+      "classification": "authorized_positive_finished_illustration"
+    },
+    {
+      "file": "03-street-day.png",
+      "media_type": "image/png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 4021670,
+      "sha256": "4b408249fc7a30aa3f2ec58525d6f046586925e77ac9e7c92b2049ca698ea8e7",
+      "description": "Daytime street and three foreground figures",
+      "classification": "authorized_positive_finished_illustration"
+    },
+    {
+      "file": "04-street-night.png",
+      "media_type": "image/png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 4035762,
+      "sha256": "59270f5fe78d225bef145f9810d5cce673b3128c126a029148afe8e6480c30d1",
+      "description": "Night street and two standing figures",
+      "classification": "authorized_positive_finished_illustration"
+    },
+    {
+      "file": "05-park.png",
+      "media_type": "image/png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 4021398,
+      "sha256": "5404ed91519341f3bea8221e9937bccf00bf76c59eb077175cd8e3e269abffc0",
+      "description": "Park and two figures",
+      "classification": "authorized_positive_finished_illustration"
+    },
+    {
+      "file": "06-family.png",
+      "media_type": "image/png",
+      "width": 1448,
+      "height": 1086,
+      "bytes": 3894093,
+      "sha256": "28472207d8ac6a1722afbfe8cb687b10a4f2a6091cca8c81a89930c4dacfe39f",
+      "description": "Six foreground figures in a horizontal composition",
+      "classification": "authorized_positive_finished_illustration"
+    },
+    {
+      "file": "07-eyewear-shop.png",
+      "media_type": "image/png",
+      "width": 1086,
+      "height": 1448,
+      "bytes": 3931737,
+      "sha256": "23523c547584aae6c6242c3453e399603e2913616e2e4647f4ca4e285a3dd733",
+      "description": "Eyewear shop and three foreground figures",
+      "classification": "authorized_positive_finished_illustration"
+    }
+  ]
+}

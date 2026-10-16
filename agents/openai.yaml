@@ -1,0 +1,4 @@
+interface:
+  display_name: "童趣蜡笔手绘绘本风"
+  short_description: "把人物与生活场景画成纸感蜡笔绘本，保留身份服饰并锁定局部修改"
+  default_prompt: "使用 $playful-crayon-storybook-skill 将这张照片画成童趣蜡笔手绘绘本，保留人数、人物特征、服饰配件、动作与场景。"
