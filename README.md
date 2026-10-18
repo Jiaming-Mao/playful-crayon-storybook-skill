@@ -12,7 +12,8 @@
 - 不透明水粉底色、蜡笔与油画棒覆盖、彩铅短线和局部纸色留白；避免光滑插画加噪点及 3D 卡通。
 - 人数、身份、服装、配件归属、动作、视线与场景保真；不凭空添加人物、动物或装饰。
 - 以最近认可成品为局部编辑基线，锁定区域外内容；跨图复用角色辨识及画风，保留每张照片本来的衣服和动作。
-- 生成后分别检查内容、造型、材料和色彩。此 Skill 提供流程与参考，需要运行环境具备图像生成/编辑能力；不保证模型每次生成都通过 QA。
+- 检查物件连续结构、前后遮挡、间隙背景与文字载体；避免全图细密均匀斜线造成的彩铅素描漂移。
+- 生成后分别检查内容、物理关系、画风和局部锁定。此 Skill 需要运行环境具备图像生成/编辑能力，不保证模型每次生成都通过 QA。
 
 ## 安装
 
@@ -64,10 +65,8 @@ git clone https://github.com/ugoneliu/playful-crayon-storybook-skill.git \
 
 | 文件 | 用途 |
 | --- | --- |
-| [SKILL.md](SKILL.md) | 触发范围、保真清单、生成与编辑流程 |
-| [风格规范](references/style-guide.md) | 造型、配色、材料、正反文字对照 |
-| [提示词模板](references/prompt-templates.md) | 照片转绘、局部修改、系列一致性 |
-| [QA 与漂移防护](references/qa-and-drift.md) | 必修项、锁定对比与恢复策略 |
+| [SKILL.md](SKILL.md) | 唯一执行规范：Style DNA、事实与物理关系、生成/编辑、QA 与恢复 |
+| [提示词骨架](references/prompt-templates.md) | 组织本次事实、变化与锁定，按需取用 |
 | [7 张正向成品](references/positive-examples.md) | 已授权视觉示例及使用边界 |
 | [图片清单](assets/positive/manifest.json) | 来源范围、尺寸与 SHA-256 |
 | [行为评估](tests/behavioral-evaluation.md) | 场景测试及实际验证范围 |
