@@ -62,7 +62,7 @@ def main():
         relative = p.relative_to(ROOT).as_posix()
         require(relative in expected_pngs or p.suffix in TEXT_SUFFIXES or relative in ROOT_DOTFILES,
                 f"Unreviewed package file: {relative}")
-    manifest = json.loads((ROOT / "assets/positive/manifest.json").read_text())
+    manifest = json.loads((ROOT / "assets/positive/manifest.json").read_text(encoding="utf-8"))
     entries = manifest["examples"]
     require(len(entries) == 7 and {e["file"] for e in entries} == APPROVED, "Invalid asset manifest")
     for entry in entries:
@@ -74,7 +74,7 @@ def main():
     for p in files:
         if p.suffix != ".md":
             continue
-        for link in re.findall(r"!?\[[^\]]*\]\(([^\s)]+)\)", p.read_text()):
+        for link in re.findall(r"!?\[[^\]]*\]\(([^\s)]+)\)", p.read_text(encoding="utf-8")):
             if re.match(r"[a-z][a-z0-9+.-]*:", link, re.I) or link.startswith("#"):
                 continue
             target = (p.parent / unquote(link.split("#", 1)[0])).resolve()

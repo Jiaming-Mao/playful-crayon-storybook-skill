@@ -1,6 +1,7 @@
 """Portable negative tests for the public package inventory checker (stdlib only)."""
 import hashlib
 import json
+import os
 import shutil
 import struct
 import subprocess
@@ -20,10 +21,10 @@ class PackageValidationTests(unittest.TestCase):
         self.copy = Path(self.scratch.name) / "package"
         shutil.copytree(PACKAGE, self.copy, ignore=shutil.ignore_patterns(".git", "__pycache__"))
 
-    def validate(self):
+    def validate(self, env=None):
         return subprocess.run(
             [sys.executable, str(self.copy / "scripts/validate_package.py")],
-            capture_output=True, text=True, check=False,
+            capture_output=True, text=True, encoding="utf-8", check=False, env=env,
         )
 
     def test_reviewed_package_is_accepted(self):
@@ -37,12 +38,17 @@ class PackageValidationTests(unittest.TestCase):
         image.write_bytes(data)
         self.assertNotEqual(self.validate().returncode, 0)
 
+    def test_non_utf8_locale_is_supported(self):
+        environment = dict(os.environ, LC_ALL="C", PYTHONUTF8="0", PYTHONCOERCECLOCALE="0")
+        result = self.validate(env=environment)
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_extra_image_is_rejected(self):
         shutil.copyfile(self.copy / "assets/positive/01-kindergarten.png", self.copy / "unreviewed.png")
         self.assertNotEqual(self.validate().returncode, 0)
 
     def test_broken_document_link_is_rejected(self):
-        with (self.copy / "README.md").open("a") as stream:
+        with (self.copy / "README.md").open("a", encoding="utf-8") as stream:
             stream.write("\n[Missing file](references/missing.md)\n")
         self.assertNotEqual(self.validate().returncode, 0)
 
@@ -55,16 +61,16 @@ class PackageValidationTests(unittest.TestCase):
         data = data[:-12] + chunk + data[-12:]
         image.write_bytes(data)
         manifest_path = self.copy / "assets/positive/manifest.json"
-        manifest = json.loads(manifest_path.read_text())
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         entry = next(e for e in manifest["examples"] if e["file"] == image.name)
         entry.update(bytes=len(data), sha256=hashlib.sha256(data).hexdigest())
-        manifest_path.write_text(json.dumps(manifest))
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
         self.assertNotEqual(self.validate().returncode, 0)
 
     def test_local_link_outside_package_is_rejected(self):
         outside = self.copy.parent / "outside.md"
-        outside.write_text("Synthetic test fixture")
-        with (self.copy / "README.md").open("a") as stream:
+        outside.write_text("Synthetic test fixture", encoding="utf-8")
+        with (self.copy / "README.md").open("a", encoding="utf-8") as stream:
             stream.write("\n[Outside file](../outside.md)\n")
         self.assertNotEqual(self.validate().returncode, 0)
 
