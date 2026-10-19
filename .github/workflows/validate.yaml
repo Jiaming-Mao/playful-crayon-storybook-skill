@@ -1,4 +1,4 @@
-name: Public Skill acceptance
+name: Public install and package checks
 
 on:
   push:
