@@ -1,6 +1,6 @@
 # 正向成品参考
 
-这里收录 7 张由用户生成、经所有者明确授权可作为公开 Skill 示例的正向成品插画。已逐张查看，并将图片内容与原对话对正向及反向案例的描述交叉核对。原始私人照片和反面案例图片均未收录。
+这里收录 7 张由用户生成、经所有者明确授权可作为公开 Skill 示例的正向成品插画。仓库整理时已逐张查看，并将图片内容与原对话对正向及反向案例的描述交叉核对；这不代表当前执行者已经读取图片。原始私人照片和反面案例图片均未收录。
 
 这些图片提供的是绘画语言参考。没有可供对照的原始私人照片，因此不能据此声称已经验证人数、人物身份、服饰、配件、物件或场景相对原照片的还原准确度。实际创作时仍须以本次用户提供的内容清单和参考图完成保真 QA。
 
@@ -12,6 +12,22 @@
 - 示例没有提供任何一位人物的跨图身份定义。不要仅凭长相相似便合并人物身份，也不要推断人物之间的关系。
 - 风格参考只能约束画法；本次用户提供的内容参考约束人数、身份、物件、动作和场景。两者冲突时，重新组织画法，不替换用户的内容。
 - 只有执行者看图并转述画风，不等于这些 PNG 已进入生图工具。必须核对该次调用真实媒体字段；不能把本说明或文件名当作像素输入。
+
+## 获取真实参考图片
+
+- **已安装或克隆**：以含 `SKILL.md` 的目录为根，将下表路径解析为实际本地文件，再用可用图像查看能力读取；不要相对于未知工作目录猜路径。
+- **仅通过公开 GitHub 阅读**：使用下表的 PNG 原文链接，或对应 GitHub 文件页的 Raw 下载入口获取图片。抓取 Markdown 或网页的文字摘要不算看图；下载后仍须用图像查看能力解码，或通过支持图片 URL/附件的视觉接口实际读取像素。HTTP 成功但返回 HTML、登录页或文字时，不能记录为图片读取成功。
+- 下表指向 `main`；若使用固定提交的 Skill，图片也应取自同一提交。某一路径不可访问时可尝试另一公开读取入口；仍无法读取则按 SKILL.md 如实说明缺项，不猜画面、不虚构调用。这些入口不依赖作者本机目录或登录凭据，也不能代替后续生图请求中的真实媒体输入。
+
+| 编号 | 从 Skill 根目录解析的路径 | 公开 PNG 原文 |
+| --- | --- | --- |
+| S01 | `assets/positive/01-kindergarten.png` | [01-kindergarten.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/01-kindergarten.png) |
+| S02 | `assets/positive/02-station-night.png` | [02-station-night.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/02-station-night.png) |
+| S03 | `assets/positive/03-street-day.png` | [03-street-day.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/03-street-day.png) |
+| S04 | `assets/positive/04-street-night.png` | [04-street-night.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/04-street-night.png) |
+| S05 | `assets/positive/05-park.png` | [05-park.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/05-park.png) |
+| S06 | `assets/positive/06-family.png` | [06-family.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/06-family.png) |
+| S07 | `assets/positive/07-eyewear-shop.png` | [07-eyewear-shop.png](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/assets/positive/07-eyewear-shop.png) |
 
 ## 01 · 日景门前近景
 

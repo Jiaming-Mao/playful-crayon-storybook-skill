@@ -12,6 +12,8 @@
 
 不需要作者账号或私人文件。完整规则位于 [SKILL.md](SKILL.md)，仓库首页只介绍安装与使用。支持网页抓取的工具可以直接读取 [SKILL 原文](https://raw.githubusercontent.com/ugoneliu/playful-crayon-storybook-skill/main/SKILL.md)，再按其指引读取 [示例说明](references/positive-examples.md) 和实际参考图；只看到 README 或只知道技能名称，不等于已加载规范和图片。
 
+[参考图片读取入口](references/positive-examples.md#获取真实参考图片) 列出全部七张 PNG 的本地相对路径与公开原文链接。Agent 须实际读取像素、区分画法与示例内容，再按本次事实组织并提交图片；读取记录或风格文字不能代替生图媒体输入。
+
 此仓库不依赖特定图片供应商、作者密钥或本机目录。实际生成仍需要使用者的运行环境提供图片生成/编辑工具；不能用一个仓库替第三方应用开启其未提供的能力。
 
 ### 画风复现还需要实际图像输入
